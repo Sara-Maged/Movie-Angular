@@ -1,0 +1,27 @@
+
+ <hr class="featurette-divider">
+
+<div class="row featurette" >
+  <!-- *ngFor="let item of detailsList" -->
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading">{{movie.title}}</h2>
+      <span class="text-muted" *ngIf = "movie.title != movie.original_title"> 
+        {{movie.original_title}}<br><br>
+      </span>
+      <p class="lead">{{movie.overview}}</p>
+      <br>
+      <h5>Release Date: <span class="lead">{{movie.release_date}}</span></h5>
+      <h5>Orginal Language: <span class="lead">{{movie.original_language}}</span></h5>
+      <h5>Popularity: <span class="lead">{{movie.popularity}}</span></h5>
+      <h5>Vote Count: <span class="lead">{{movie.vote_count}}</span></h5>
+
+    </div>
+    <div class="col-md-5 order-md-1">
+      <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
+        width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" 
+        focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#eee"/>
+        <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+      <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+    </div>
+  </div>
