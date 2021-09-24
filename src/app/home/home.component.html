@@ -1,0 +1,69 @@
+
+<br><br>
+
+<h1 class="jumbotron text-center">
+  TOP RATED MOVIES
+</h1>
+
+<table >
+
+  <thead>
+    <tr>
+      <!-- <th><h2>Image</h2></th>
+      <th><h2>Name</h2></th>
+      <th><h2>Vote Count</h2></th> -->
+  </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let movie of movieList">
+      <!-- <a class="nav-link" routerLink="/details-page"> </a> -->
+      <!-- <td><img src="little-women.jpg" width="150" height="250" routerLink="/details-page" onclick="getDetails(movie.id)"></td> -->
+      <td>
+        <a routerLink ="/details-page/{{movie.id}}">
+          <img src="https://image.tmdb.org/t/p/w154/{{movie.poster_path}}">
+        </a>
+      </td>
+      <!-- (click)="this.getDetails(movie.id)" routerLink="/(movie.id)/details-page -->
+
+
+      <td>
+          <h3>{{movie.title}}</h3> <h3 *ngIf = "movie.title != movie.original_title">{{movie.original_title}} </h3>
+          <p>{{movie.overview}}</p>
+
+      </td>
+      <td>
+        <!-- <h3>Vote Count:</h3>  -->
+        <p>{{movie.vote_average}}</p>
+      </td>
+  </tr>
+  </tbody>
+
+</table>
+
+<!-- <div class="container">
+  <table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Orginal Title</th>
+      <th>Title</th>
+      <th>Orginal Language</th>
+      <th>Release Date</th>
+      <th>Poster</th>
+       <th>vout count</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let movie of movieList">
+      <td><span>{{movie.id}}</span></td>
+      <td><span>{{movie.original_title}}</span></td>
+      <td><span>{{movie.title}}</span></td>
+      <td><span>{{movie.original_language}}</span></td>
+      <td><span>{{movie.release_date}}</span></td>
+      <td><img src={{movie.poster_path}}></td>
+      <td><span>{{movie.vote_count}}</span></td>
+    </tr>
+    </tbody>
+  </table>
+</div> -->
