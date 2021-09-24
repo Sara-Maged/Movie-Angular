@@ -1,10 +1,14 @@
-.bd-placeholder-img {
+/* .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+  } */
+
+  img{
+    margin-left: 40px;
   }
 
   @media (min-width: 768px) {

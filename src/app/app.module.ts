@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { DetailsPageComponent } from './details-page/details-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,15 +16,16 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    DetailsPageComponent,
+    DetailsPageComponent,  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [HttpClientModule,AppRoutingModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

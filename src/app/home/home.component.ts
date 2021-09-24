@@ -16,8 +16,9 @@ export class Top_Movies {
 export class HomeComponent implements OnInit {
   movieList: any[] | undefined;
   //detailsList: any;
-
-  constructor(private httpClient: HttpClient) { //private movie:MovieApiService
+  
+  constructor(private httpClient: HttpClient) { 
+    //private movie:MovieApiService
     // this.movie.getList().subscribe(moviesList => {
     //   console.warn(moviesList)
     //   this.moviesList = moviesList
