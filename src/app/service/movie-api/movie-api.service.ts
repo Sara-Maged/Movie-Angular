@@ -14,11 +14,11 @@ export class MovieApiService {
   constructor(private http : HttpClient) { }
 
   getById(id: any):Observable<any>{
-    console.log(id);
+    //console.log(id);
     const url = 'https://api.themoviedb.org/3/movie/'+id+'?api_key=401acaaed66217e58bfececf4369ef49';
-    console.log(url);
-    console.log('SAWSAAAAAAAAAAAAAAN');
-    console.log(this.http.get(url));
+    //console.log(url);
+    //console.log('AAAAAAAAAAAAAA');
+    //console.log(this.http.get(url));
     return this.http.get(url)
   }
 
