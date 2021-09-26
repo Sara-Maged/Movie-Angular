@@ -18,7 +18,6 @@ export class DetailsPageComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    //this.getDetails(550);
     this.loadMovie();
   }
 
